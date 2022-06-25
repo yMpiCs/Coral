@@ -1,0 +1,39 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+{% block content %}
+	<div class = "content-section">
+		<div class="alert alert-primary" role="alert">
+		
+		<img id="bg" src="{{ url_for('video_feed') }}">
+		<div><input type="submit" name="action" value="SUBMIT"></input></div>
+		</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.min.js"></script>
+
+
+{% endblock content %}
+</head>
+</html> -->
+
+
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+            <h3 class="mt-5">Live Streaming</h3>
+            <form method="post" action="{{ url_for('tasks') }}">
+            <!-- <form method="post" action="/"> -->
+        		<input type="submit" value="Reset" name="Reset"/>
+                <input type="submit" value="Car Control" name="car"/>
+                <div>Enter Text<input type="text" name="text" required></input></div>
+                <input type="submit" value="Target" name="Target" />
+        		
+        		
+    		</form>
+            <img src="{{ url_for('video_feed') }}" width="50%">
+        </div>
+    </div>
+</div>
+</body>
